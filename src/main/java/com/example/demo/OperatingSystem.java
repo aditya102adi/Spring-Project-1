@@ -4,11 +4,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class OperatingSystem {
+	
 	String name;
 	String version;
 	
 	public OperatingSystem() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public OperatingSystem(String name, String version) {

@@ -1,20 +1,25 @@
 package com.example.demo;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Laptop {
+
+   
 	String brand;
 	int prince;
 	String processor;
 	int ramSize;
 	
+	@Autowired
 	OperatingSystem os;
-	
-	public Laptop() {
-		// TODO Auto-generated constructor stub
+
+
+    public Laptop() {
+		
 	}
+    
 
 	public Laptop(String brand, int prince, String processor, int ramSize, OperatingSystem os) {
 		super();
@@ -24,6 +29,7 @@ public class Laptop {
 		this.ramSize = ramSize;
 		this.os = os;
 	}
+
 
 	public String getBrand() {
 		return brand;
@@ -69,5 +75,14 @@ public class Laptop {
 
 	public void setOs(OperatingSystem os) {
 		this.os = os;
+	}
+	
+	public void displayDetails() {
+		System.out.println("Laptop Barnd " + brand);
+		System.out.println("Laptop Price " + prince);
+		System.out.println("Laptop Processor " + processor);
+		System.out.println("Laptop Ramsize " + ramSize);
+		System.out.println("Laptop Operating System " + os.getName());
+		System.out.println("Operating System Version " + os.getVersion());
 	}
 }
